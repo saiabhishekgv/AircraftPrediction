@@ -5,7 +5,7 @@ def test_duplicates():
   print("Coming Here")
   df = pd.read_csv("abc.csv")
   for column in df.columns:
-    assert any(df.duplicated(subset=[column])) 
+    assert not any(df.duplicated(subset=[column])) 
 
     
 if __name__ == '__main__':
